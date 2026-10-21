@@ -1,0 +1,118 @@
+version: "1.0.0"
+criteria:
+  - id: "output_integrity"
+    description: "Validates schema integrity, required fields, and word bounds for requested length."
+    pass_condition: "All required sections populated and word count falls within length bounds."
+    severity: "critical"
+    method: "deterministic"
+    blocking: true
+    required_evidence: "Computed word count and field completeness audit."
+    version: "1.0.0"
+
+  - id: "beginner_readability"
+    description: "Evaluates Flesch-Kincaid grade level against learner target ceiling."
+    pass_condition: "Flesch-Kincaid grade does not exceed the target learner ceiling."
+    severity: "major"
+    method: "deterministic"
+    blocking: true
+    required_evidence: "Computed Flesch-Kincaid grade level vs ceiling threshold."
+    version: "1.0.0"
+
+  - id: "jargon_control"
+    description: "Assures every glossary term has a definition and every specialized_terms entry is defined."
+    pass_condition: "Glossary definitions non-empty and all specialized_terms accounted for."
+    severity: "major"
+    method: "deterministic"
+    blocking: true
+    required_evidence: "Glossary audit and inline definition cross-check."
+    version: "1.0.0"
+
+  - id: "example_present"
+    description: "Verifies worked example is populated and explicitly referenced in steps or summary."
+    pass_condition: "Worked example is non-empty and connected in teaching text."
+    severity: "critical"
+    method: "deterministic"
+    blocking: true
+    required_evidence: "Worked example reference search match."
+    version: "1.0.0"
+
+  - id: "teaching_flow_structure"
+    description: "Verifies pedagogical sections follow sequential instructional order."
+    pass_condition: "Steps progress logically with distinct headings and bodies."
+    severity: "major"
+    method: "deterministic"
+    blocking: true
+    required_evidence: "Section sequencing verification."
+    version: "1.0.0"
+
+  - id: "code_integrity"
+    description: "Parses embedded Python code blocks with ast.parse. Other languages marked not checked."
+    pass_condition: "Python code snippets parse without SyntaxError."
+    severity: "critical"
+    method: "deterministic"
+    blocking: true
+    required_evidence: "AST parse log or syntax error trace."
+    version: "1.0.0"
+
+  - id: "citation_integrity"
+    description: "Ensures all citations match supplied sources with zero fabricated citations or URLs."
+    pass_condition: "Every reference matches a supplied source ID or title; zero external citations if no sources supplied."
+    severity: "critical"
+    method: "deterministic"
+    blocking: true
+    required_evidence: "List of unauthorized references or fabricated URLs found."
+    version: "1.0.0"
+
+  - id: "factual_accuracy"
+    description: "Verifies domain facts, definitions, and mechanics are factually sound."
+    pass_condition: "No material factual inaccuracies or misleading claims."
+    severity: "critical"
+    method: "llm"
+    blocking: true
+    required_evidence: "Specific excerpts demonstrating factual inaccuracy."
+    version: "1.0.0"
+
+  - id: "internal_consistency"
+    description: "Ensures no internal contradictions across sections."
+    pass_condition: "Definitions, walkthroughs, and instructions are logically harmonious."
+    severity: "critical"
+    method: "llm"
+    blocking: true
+    required_evidence: "Pairs of contradictory excerpts."
+    version: "1.0.0"
+
+  - id: "example_correctness"
+    description: "Verifies worked example scenario and walkthrough are technically sound."
+    pass_condition: "Worked example demonstration is correct and feasible."
+    severity: "major"
+    method: "llm"
+    blocking: true
+    required_evidence: "Walkthrough step analysis."
+    version: "1.0.0"
+
+  - id: "topic_coverage"
+    description: "Evaluates whether stated learning objectives are substantively addressed."
+    pass_condition: "All learning objectives are covered in the lesson body."
+    severity: "major"
+    method: "llm"
+    blocking: true
+    required_evidence: "Objective-to-section mapping."
+    version: "1.0.0"
+
+  - id: "coherence_of_flow"
+    description: "Evaluates narrative transitions, clarity of progression, and pacing."
+    pass_condition: "Transitions between sections are coherent without conceptual leaps."
+    severity: "major"
+    method: "llm"
+    blocking: true
+    required_evidence: "Pacing and transition analysis."
+    version: "1.0.0"
+
+  - id: "standalone_completeness"
+    description: "Verifies lesson can be understood without missing prerequisites or unexplained assumptions."
+    pass_condition: "Provides sufficient context for a beginner to achieve understanding."
+    severity: "major"
+    method: "llm"
+    blocking: true
+    required_evidence: "Unresolved dependency audit."
+    version: "1.0.0"
