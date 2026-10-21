@@ -9,6 +9,8 @@ on:
 jobs:
   test-and-verify:
     runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: .
     strategy:
       matrix:
         python-version: ["3.12"]
