@@ -1,0 +1,66 @@
+{
+  "title": "Introduction to Binary Search Algorithms",
+  "introduction": "Binary search is an efficient algorithm for finding an item from a sorted list of items. It works by repeatedly dividing in half the portion of the list that could contain the item until you have narrowed down the possible locations to just one. When searching through linear collections, binary search drastically reduces the number of comparisons compared to a simple sequential scan. Understanding this technique provides a foundational mental model for logarithmic computational complexity and divide-and-conquer strategies.",
+  "prerequisites": [
+    "Basic familiarity with ordered lists of numbers",
+    "Understanding of greater than and less than comparisons"
+  ],
+  "definition": "Binary search is a search algorithm that finds the position of a target value within a sorted array by comparing the target value to the middle element of the array.",
+  "why_it_matters": "Binary search runs in logarithmic time, meaning that searching a billion sorted items requires at most thirty comparisons. This makes binary search essential for large-scale data retrieval in database indexing and operating system lookups.",
+  "steps": [
+    {
+      "heading": "Step 1: Establishing Search Boundaries",
+      "body": "Begin with two pointers representing the start and end of the sorted collection: low set to index zero and high set to the last element index. As demonstrated in our worked example scenario, these pointers delimit the active search space."
+    },
+    {
+      "heading": "Step 2: Calculating the Middle Point",
+      "body": "Compute the midpoint between low and high. Check if the element at the midpoint matches the desired target value. If a match occurs, return the midpoint index immediately."
+    },
+    {
+      "heading": "Step 3: Narrowing the Half Interval",
+      "body": "If the target is smaller than the middle element, update high to mid minus one. If the target is larger, update low to mid plus one. Repeat this sequence until the target is found or low exceeds high."
+    }
+  ],
+  "worked_example": {
+    "scenario": "Finding target value 7 in the sorted array [1, 3, 5, 7, 9, 11].",
+    "walkthrough": "Set low to 0 and high to 5. The middle index is 2 with value 5. Since 7 is greater than 5, adjust low to mid + 1, which equals 3. Next, recalculate mid between index 3 and index 5, giving index 4 with value 9. Since 7 is less than 9, adjust high to mid - 1, which equals index 3. Now mid is index 3 with value 7, which matches our target value."
+  },
+  "key_distinctions": [
+    "Binary search requires the input collection to be sorted beforehand, whereas linear search works on unsorted lists."
+  ],
+  "common_misunderstandings": [
+    "Assuming binary search works on unsorted lists without prior ordering."
+  ],
+  "glossary": [
+    {
+      "term": "Logarithmic Time",
+      "definition": "An execution duration where the number of operations grows proportionally to the logarithm of the input size."
+    },
+    {
+      "term": "Sorted Array",
+      "definition": "A sequence of elements organized in monotonic ascending or descending order."
+    }
+  ],
+  "specialized_terms": [
+    "Logarithmic Time",
+    "Sorted Array"
+  ],
+  "summary": "Binary search provides an optimal divide-and-conquer strategy for querying sorted data. As illustrated in the worked example scenario, halving the search space at each iteration guarantees rapid convergence even across massive datasets.",
+  "takeaways": [
+    "Always ensure arrays are sorted prior to running binary search.",
+    "The search interval halves with each comparison step.",
+    "Logarithmic complexity guarantees sub-second lookup across millions of items."
+  ],
+  "comprehension_questions": [
+    {
+      "question": "What primary precondition must be met before executing binary search?",
+      "answer": "The collection must be pre-sorted in ascending or descending order."
+    }
+  ],
+  "references": [
+    {
+      "source_id": "src-1",
+      "title": "Algorithms and Data Structures Reference"
+    }
+  ]
+}

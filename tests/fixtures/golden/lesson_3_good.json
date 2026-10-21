@@ -1,0 +1,66 @@
+{
+  "title": "Understanding Relational Database Primary Keys",
+  "introduction": "In relational databases, storing information efficiently requires establishing unambiguous ways to distinguish every individual entry. A primary key acts as a designated unique identifier for records stored within a database table. By enforcing uniqueness and non-null constraints, primary keys prevent duplicate rows and ensure data integrity across enterprise information systems. They also serve as the bedrock for relationships linking disparate tables through foreign key references.",
+  "prerequisites": [
+    "Understanding of tabular rows and columns",
+    "Familiarity with spreadsheet databases"
+  ],
+  "definition": "A primary key is a column or set of columns in a relational database table whose values uniquely identify each row in that table.",
+  "why_it_matters": "Without primary keys, database engines cannot reliably query, update, or delete single records without accidentally corrupting adjacent matching data rows.",
+  "steps": [
+    {
+      "heading": "Step 1: Selecting Candidate Key Attributes",
+      "body": "Identify candidate columns that naturally possess unique values or generate synthetic surrogate keys such as auto-incrementing integers or UUIDs. As examined in our worked example scenario, choosing an invariant identifier is crucial."
+    },
+    {
+      "heading": "Step 2: Enforcing Uniqueness and Non-Null Constraints",
+      "body": "Declare the primary key constraint inside the schema definition. The relational database engine automatically rejects any insert or update operation attempting to write duplicate values or null entries into the column."
+    },
+    {
+      "heading": "Step 3: Creating Index Lookups and Foreign Keys",
+      "body": "The database creates an underlying unique clustered index over the primary key column to accelerate query lookup times and facilitate relational joins with foreign key tables."
+    }
+  ],
+  "worked_example": {
+    "scenario": "Assigning employee identifiers in a company personnel table.",
+    "walkthrough": "A company creates an employees table containing first_name, last_name, and employee_id. Because two workers may share identical names, employee_id is declared as the primary key. When registering Alice as ID 101 and Bob as ID 102, both insert cleanly. If an admin attempts to insert Charlie using duplicate ID 101, the database halts execution and raises a unique constraint violation."
+  },
+  "key_distinctions": [
+    "A primary key uniquely identifies rows in its own table, whereas a foreign key references a primary key located in a different table."
+  ],
+  "common_misunderstandings": [
+    "Assuming names or phone numbers make reliable primary keys, despite people changing numbers or sharing identical names."
+  ],
+  "glossary": [
+    {
+      "term": "Surrogate Key",
+      "definition": "An artificially created unique identifier assigned to an entity when natural identifiers are absent or volatile."
+    },
+    {
+      "term": "Foreign Key",
+      "definition": "A column that provides a link between data in two tables by referencing the primary key of another table."
+    }
+  ],
+  "specialized_terms": [
+    "Surrogate Key",
+    "Foreign Key"
+  ],
+  "summary": "Primary keys provide guaranteed row identification in relational schemas. As shown in our worked example scenario, enforcing uniqueness prevents data ambiguity and preserves relational integrity across systems.",
+  "takeaways": [
+    "Every relational table must designate a unique, non-null primary key.",
+    "Surrogate numeric keys avoid complications from volatile real-world attributes.",
+    "Foreign keys rely on primary keys to establish reliable relational joins."
+  ],
+  "comprehension_questions": [
+    {
+      "question": "Can a primary key column accept null values?",
+      "answer": "No, primary key columns strictly prohibit null entries."
+    }
+  ],
+  "references": [
+    {
+      "source_id": "src-1",
+      "title": "Relational Database Management Systems"
+    }
+  ]
+}

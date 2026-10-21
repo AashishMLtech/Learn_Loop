@@ -1,0 +1,57 @@
+{
+  "title": "Flawed Lesson Demonstrating Fabricated Citations",
+  "introduction": "This lesson is intentionally authored with an isolated citation integrity flaw. When automated generation systems reference research materials, they must restrict citations strictly to verified documents supplied in the prompt bundle. Fabricating citations to external or imaginary sources damages factual reliability, prevents learners from finding referenced papers, and directly violates citation integrity constraints.",
+  "prerequisites": [
+    "Critical reading skills",
+    "Understanding of academic attribution"
+  ],
+  "definition": "Citation integrity requires all listed bibliographic references and citations to correspond directly with supplied source identifiers.",
+  "why_it_matters": "Strict citation grounding ensures that students and auditors can verify factual claims directly against authentic reference materials.",
+  "steps": [
+    {
+      "heading": "Step 1: Identifying Authoritative Sources",
+      "body": "When drafting technical explanations, references should only be drawn from authorized input bundles. As highlighted in our worked example scenario, listing non-existent sources breaks traceability."
+    },
+    {
+      "heading": "Step 2: Detecting Fabricated Identifiers",
+      "body": "Evaluation systems cross-reference every cited source identifier against the manifest of supplied documents. If an identifier is found that does not exist in the input bundle, the validator flags the entry as an unauthorized fabrication."
+    }
+  ],
+  "worked_example": {
+    "scenario": "Referencing an invented research publication that was never provided.",
+    "walkthrough": "The lesson lists a bibliographic citation with source_id 'invented_external_paper_999'. Because the input bundle contains only 'src-1', the validator detects the discrepancy and immediately rejects the lesson draft."
+  },
+  "key_distinctions": [
+    "Attribution to provided documents versus unverified hallucinated citations."
+  ],
+  "common_misunderstandings": [
+    "Assuming that realistic-sounding publication titles and identifiers correspond to genuine documents without validation."
+  ],
+  "glossary": [
+    {
+      "term": "Citation Grounding",
+      "definition": "The requirement that all citations map exclusively to verified, supplied source documents."
+    }
+  ],
+  "specialized_terms": [
+    "Citation Grounding"
+  ],
+  "summary": "This worked example scenario highlights why fabricated sources fail the citation integrity check, reinforcing the rule that content must only cite supplied documents.",
+  "takeaways": [
+    "Never cite sources that were not explicitly provided in the input bundle.",
+    "Automated cross-referencing catches invented publication citations.",
+    "Strict grounding builds verifiable educational materials."
+  ],
+  "comprehension_questions": [
+    {
+      "question": "Why did this lesson fail evaluation?",
+      "answer": "It cited an unsupplied, fabricated source identifier ('invented_external_paper_999')."
+    }
+  ],
+  "references": [
+    {
+      "source_id": "invented_external_paper_999",
+      "title": "Fictional Journal of Imaginary Algorithms"
+    }
+  ]
+}

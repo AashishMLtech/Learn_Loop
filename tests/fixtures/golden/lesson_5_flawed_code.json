@@ -1,0 +1,52 @@
+{
+  "title": "Flawed Lesson Demonstrating Syntax Errors in Code Blocks",
+  "introduction": "This lesson is intentionally authored with an isolated code syntax flaw. In computer science education, programming snippets embedded within instructional text must be syntactically valid and executable. When instructional materials present broken code snippets that fail to parse, beginners experience immediate syntax errors, creating unnecessary friction that hinders conceptual learning and damages credibility.",
+  "prerequisites": [
+    "Basic computer literacy",
+    "Understanding of variables and functions"
+  ],
+  "definition": "Code integrity ensures that every programming snippet embedded within instructional materials parses cleanly and adheres to language syntax rules.",
+  "why_it_matters": "Clean and error-free code snippets prevent beginner confusion and enable learners to reproduce results accurately in their own programming environments.",
+  "steps": [
+    {
+      "heading": "Step 1: Inspecting the Function Definition",
+      "body": "Consider the following Python snippet intended to calculate the sum of two values. Notice that it contains a syntax error because the parameter list lacks a closing parenthesis:\n```python\ndef broken_addition(first_number, second_number\n    return first_number + second_number\n```\nAs highlighted in our worked example scenario, attempting to execute or parse this snippet results in an immediate failure."
+    },
+    {
+      "heading": "Step 2: Understanding Syntax Parsing",
+      "body": "Before any Python program can run, the interpreter performs a lexical analysis and parsing phase to verify grammar rules. Because the opening parenthesis is never matched, the parser cannot build an abstract syntax tree and raises an error before execution begins."
+    }
+  ],
+  "worked_example": {
+    "scenario": "Executing a broken Python snippet during an introductory coding exercise.",
+    "walkthrough": "A learner copies the code block into an interactive Python shell. The interpreter immediately halts parsing and reports a SyntaxError pointing to the unclosed parenthesis, preventing the function from ever being called."
+  },
+  "key_distinctions": [
+    "Syntax errors prevent code from parsing, whereas logical errors execute but yield unexpected outputs."
+  ],
+  "common_misunderstandings": [
+    "Thinking syntax errors can be caught at runtime by try-except blocks during function invocation."
+  ],
+  "glossary": [
+    {
+      "term": "Syntax Error",
+      "definition": "An error in the syntax of a coding language that prevents code from being parsed."
+    }
+  ],
+  "specialized_terms": [
+    "Syntax Error"
+  ],
+  "summary": "Our worked example scenario demonstrates that broken code snippets fail evaluation due to invalid syntax, illustrating why automated AST validation is essential.",
+  "takeaways": [
+    "All embedded code snippets must parse cleanly without syntax errors.",
+    "Automated AST validation catches typos before materials reach learners.",
+    "Syntactically correct code builds learner confidence."
+  ],
+  "comprehension_questions": [
+    {
+      "question": "What kind of error does the snippet produce?",
+      "answer": "A SyntaxError caused by an unclosed parameter list parenthesis."
+    }
+  ],
+  "references": []
+}

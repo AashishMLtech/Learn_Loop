@@ -1,0 +1,66 @@
+{
+  "title": "Fundamentals of Photosynthesis in Plant Biology",
+  "introduction": "Photosynthesis is the biological process used by green plants and certain other organisms to transform light energy into chemical energy. During photosynthesis in green plants, light energy is captured and used to convert water, carbon dioxide, and minerals into oxygen and energy-rich organic compounds. This biochemical pathway sustains nearly all aerobic life on Earth by generating atmospheric oxygen and establishing the foundational base of global food webs.",
+  "prerequisites": [
+    "Basic awareness of cellular structures",
+    "Understanding that plants absorb sunlight"
+  ],
+  "definition": "Photosynthesis is the physicochemical process by which photosynthetic organisms synthesize organic molecules using sunlight, atmospheric carbon dioxide, and water.",
+  "why_it_matters": "Photosynthesis is directly responsible for replenishing oxygen in our atmosphere and producing the biomass that feeds herbivores and carnivores across terrestrial and aquatic ecosystems.",
+  "steps": [
+    {
+      "heading": "Step 1: Solar Absorption in Chloroplasts",
+      "body": "Specialized pigments called chlorophyll located within chloroplasts capture photons from solar radiation. In our worked example scenario, this captured photonic energy excites electrons to initiate chemical conversion."
+    },
+    {
+      "heading": "Step 2: Light-Dependent Reactions and Photolysis",
+      "body": "Water molecules split into protons, electrons, and molecular oxygen gas. The released oxygen is expelled into the atmosphere, while high-energy carriers ATP and NADPH are synthesized."
+    },
+    {
+      "heading": "Step 3: Carbon Fixation via the Calvin Cycle",
+      "body": "Enzymes assimilate atmospheric carbon dioxide to construct three-carbon sugars. These intermediate molecules subsequently assemble into glucose and starches for plant metabolic storage."
+    }
+  ],
+  "worked_example": {
+    "scenario": "A maple leaf absorbing sunlight on a bright summer afternoon.",
+    "walkthrough": "Sunlight strikes the leaf surface where palisade mesophyll cells absorb photons via chlorophyll. Water drawn through root vascular xylem enters the chloroplasts. The light-dependent reactions split water, emitting oxygen bubbles from stomata. Simultaneously, captured carbon dioxide combines with ribulose bisphosphate in the stroma to manufacture glucose for seasonal growth."
+  },
+  "key_distinctions": [
+    "Photosynthesis produces glucose and releases oxygen, whereas cellular respiration consumes glucose and takes in oxygen."
+  ],
+  "common_misunderstandings": [
+    "Believing that plants conduct photosynthesis at night without stored chemical energy or sunlight."
+  ],
+  "glossary": [
+    {
+      "term": "Chloroplast",
+      "definition": "An organelle found within plant cells where photosynthesis occurs."
+    },
+    {
+      "term": "Calvin Cycle",
+      "definition": "A series of chemical reactions during photosynthesis that fixes carbon dioxide into sugar molecules."
+    }
+  ],
+  "specialized_terms": [
+    "Chloroplast",
+    "Calvin Cycle"
+  ],
+  "summary": "Photosynthesis converts radiant solar energy into stable chemical bonds. In the worked example scenario, chloroplasts absorb sunlight to split water, release vital oxygen, and generate glucose.",
+  "takeaways": [
+    "Chlorophyll pigments capture photons within chloroplast organelles.",
+    "Water is split to produce oxygen during the light-dependent phase.",
+    "The Calvin cycle fixes carbon dioxide into organic carbohydrates."
+  ],
+  "comprehension_questions": [
+    {
+      "question": "What gas is released into the atmosphere as a byproduct of water photolysis?",
+      "answer": "Oxygen gas (O2)."
+    }
+  ],
+  "references": [
+    {
+      "source_id": "src-1",
+      "title": "General Botany and Plant Physiology"
+    }
+  ]
+}
